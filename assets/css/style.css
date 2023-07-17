@@ -17,6 +17,7 @@
 body {
   font-size: 12px; 
   font-family: 'Kumbh Sans Regular';
+  font-weight: 500;
 }
 /* Family */
 /* 
@@ -36,6 +37,11 @@ body {
   justify-content: center;
 }
 
+.wrapper {
+  text-align: center;
+
+}
+
 /* Accordion */
 
 .accordion {
@@ -43,28 +49,67 @@ body {
   text-align: left;
 }
 
+.accordion span {
+  float: right;
+}
+
 .active, .accordion:hover {
-  background-color: #ccc; 
+  font-family: 'Kumbh Sans Bold';
+  font-weight: 800;
+}
+
+.faq-card {
+  border-radius: 20px;
+  width: 85%;
+  margin: 0 auto;
+  background-color: var(--platinum);
+}
+
+.faq-card h1 {
+  font-family: 'Kumbh Sans Bold';
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.faq-card ul {
+  padding: 30px;
+}
+
+.faq-card ul li {
+  font-size: 14px;
+  padding: 15px 0;
 }
 
 .panel {
   display: none;
+  padding: 0 20px;
+  line-height: 20px;
 }
 
-.faq-card {
-  border: 5px solid green;
-  border-radius: 20px;
-  width: 90%;
-  margin: 0 auto;
-  
+.li-border-bottom {
+  border-bottom: 1px solid var(--independence);
+  padding: 0!important;
+  margin: 0!important;
 }
 
-.img-shadow {
-  /* box-shadow: 10px 10px 10px red; */
-}
-
-.img-shadow img {
+.desk-icon {
   width: 300px;
   height: auto;
+  margin-top: -135px;
+}
+
+.desk-icon-shadow {
+  width: 300px;
+  margin-top: -100px;
   padding-bottom: 30px;
 }
+
+.verse-icon {
+  display: block;
+}
+
+.reverse-icon {
+  transform: rotate(180deg);
+  display: none;
+}
+

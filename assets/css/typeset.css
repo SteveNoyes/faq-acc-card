@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Kumbh Sans Regular';
-    src: url('KumbhSans-Regular.woff2') format('woff2'),
-        url('KumbhSans-Regular.woff') format('woff'),
-        url('KumbhSans-Regular.ttf') format('truetype');
+    src: url('../fonts/KumbhSans-Regular.woff2') format('woff2'),
+        url('../fonts/KumbhSans-Regular.woff') format('woff'),
+        url('../fonts/KumbhSans-Regular.ttf') format('truetype');
     /* font-weight: normal; */
     font-style: normal;
     font-display: swap;
@@ -10,9 +10,9 @@
 
 @font-face {
     font-family: 'Kumbh Sans Bold';
-    src: url('KumbhSans-Bold.woff2') format('woff2'),
-        url('KumbhSans-Bold.woff') format('woff'),
-        url('KumbhSans-Bold.ttf') format('truetype');
+    src: url('../fonts/KumbhSans-Bold.woff2') format('woff2'),
+        url('../fonts/KumbhSans-Bold.woff') format('woff'),
+        url('../fonts/KumbhSans-Bold.ttf') format('truetype');
     /* font-weight: bold; */
     font-style: normal;
     font-display: swap;

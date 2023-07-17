@@ -13,34 +13,39 @@
   <div class="main">
     <div class="wrapper">
       <div class="faq-card">
-        <div class="img-shadow">
-          <img src="./assets/images/illustration-woman-online-mobile.svg" alt="An aspect ration nightmare fuel">
-          <img src="./assets/images/bg-pattern-mobile.svg" alt="">
-          <img src="./assets/images/icon-arrow-down.svg" alt="">
+        <div class="img-wrapper">
+          <img class="desk-icon" src="./assets/images/illustration-woman-online-mobile.svg" alt="Aspect ration nightmare fuel">
+          <img class="desk-icon-shadow" src="./assets/images/bg-pattern-mobile.svg" alt="">
         </div>
         <h1>FAQ</h1>
         <ul>
-          <li class="accordion">How many team members can I invite?</li>
+          <li class="accordion">How many team members can I invite?<span class="verse-icon"><img src="./assets/images/icon-arrow-down.svg" alt=""></span><span class="reverse-icon"><img src="./assets/images/icon-arrow-down.svg" alt=""></span></li>
           <div class="panel">
             <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
           </div>
-          <li class="accordion">What is the maximum file upload size?</li>
+          <li class="li-border-bottom"></li>
+          <li class="accordion">What is the maximum file upload size?<span><img src="./assets/images/icon-arrow-down.svg" alt=""></span></li>
           <div class="panel">
             <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
           </div>
-          <li class="accordion">How do I reset my password?</li>
+          <li class="li-border-bottom"></li>
+          <li class="accordion">How do I reset my password?<span><img src="./assets/images/icon-arrow-down.svg" alt=""></span></li>
           <div class="panel">
             <p>Click “Forgot password” from the login page or “Change password” from your profile page.</p>
             <p>A reset link will be emailed to you.</p>
           </div>
-          <li class="accordion">Can I cancel my subscription?</li>
+          <li class="li-border-bottom"></li>
+          <li class="accordion">Can I cancel my subscription?<span><img src="./assets/images/icon-arrow-down.svg" alt=""></span></li>
           <div class="panel">
             <p>Yes! Send us a message and we'll process your request no questions asked.</p>
           </div>
-          <li class="accordion">Do you provide additional support?</li>
+          <li class="li-border-bottom"></li>
+          <li class="accordion">Do you provide additional support?<span><img src="./assets/images/icon-arrow-down.svg" alt=""></span></li>
           <div class="panel">
             <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
           </div>
+          <li class="li-border-bottom"></li>
+
         </ul>
       </div>
     </div>
@@ -48,7 +53,6 @@
   <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
-    
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
