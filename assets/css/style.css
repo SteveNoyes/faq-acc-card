@@ -1,17 +1,10 @@
 :root {
-  /* Primary */
-  /* Text */
   --dark-gunmetal: #1d1e35;
   --coral: #F47C57;
-  /* Gradient */
-  /* Background gradient: */
   --rich-lilac: #AF67E9;
   --medium-slate-blue: #6565e7;
-  /* Neutral */
-  /* Text */
   --independence: #4a4b5e;
   --gray: #787887;
-  /* Dividers */
   --platinum: #e7e7e9;
 }
 body {
@@ -19,15 +12,6 @@ body {
   font-family: 'Kumbh Sans Regular';
   font-weight: 500;
 }
-/* Family */
-/* 
-'Kumbh Sans Regular';
-'Kumbh Sans Bold'; 
-*/
-
-/* Weights: 500, 700, 800 */
-
-
 .main {
   background: linear-gradient(var(--rich-lilac), var(--medium-slate-blue));
   height: 100vh;
@@ -36,80 +20,125 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .wrapper {
   text-align: center;
-
 }
-
-/* Accordion */
-
-.accordion {
-  cursor: pointer;
-  text-align: left;
+.desktop-box-icon {
+  display: none;
 }
-
-.accordion span {
-  float: right;
+.desk-icon {
+  width: 250px;
+  height: auto;
+  margin-top: -113px;
 }
-
-.active, .accordion:hover {
-  font-family: 'Kumbh Sans Bold';
-  font-weight: 800;
+.desk-icon-shadow {
+  width: 250px;
+  margin-top: -80px;
+  padding-bottom: 30px;
 }
-
+.mobile-toggle {
+  display: inline;
+}
+.desktop-toggle {
+  display: none;
+}
 .faq-card {
   border-radius: 20px;
-  width: 85%;
+  width: 350px;
   margin: 0 auto;
-  background-color: var(--platinum);
+  background-color: white;
 }
-
 .faq-card h1 {
   font-family: 'Kumbh Sans Bold';
   font-weight: 800;
   font-size: 32px;
 }
-
 .faq-card ul {
-  padding: 30px;
+  padding: 30px 30px 50px 30px;
 }
-
 .faq-card ul li {
   font-size: 14px;
   padding: 15px 0;
 }
-
+.accordion {
+  cursor: pointer;
+  text-align: left;
+}
+.verseIcon {
+  float: right;
+}
+.active {
+  font-family: 'Kumbh Sans Bold';
+  font-weight: 800;
+  color: var(--dark-gunmetal)!important;
+}
+.accordion:hover {
+  color: var(--coral);
+}
 .panel {
   display: none;
-  padding: 0 20px;
+  padding: 0 40px 0 0;
   line-height: 20px;
+  text-align: left;
+  color: grey;
 }
-
 .li-border-bottom {
-  border-bottom: 1px solid var(--independence);
+  border-bottom: 1px solid var(--platinum);
   padding: 0!important;
   margin: 0!important;
 }
-
-.desk-icon {
-  width: 300px;
-  height: auto;
-  margin-top: -135px;
-}
-
-.desk-icon-shadow {
-  width: 300px;
-  margin-top: -100px;
-  padding-bottom: 30px;
-}
-
-.verse-icon {
-  display: block;
-}
-
-.reverse-icon {
+.reverseIcon {
   transform: rotate(180deg);
-  display: none;
 }
-
+@media screen and (min-width: 1000px) {
+  .mobile-toggle {
+    display: none;
+  }
+  .desktop-toggle {
+    display: inline;
+  }
+  .desktop-desk-icon {
+    width: 350px;
+    position: relative;
+    top: 70px;
+    right: 60px;
+    z-index: 100;
+  }
+  .desktop-box-icon {
+    position: relative;
+    right: 410px;
+    top: 290px;
+    width: 110px;
+    height: 110px;
+    z-index: 1000;
+  }
+  .desktop-desk-icon-shadow {
+    width: 750px;
+    position: relative;
+    bottom: 490px;
+    right: 461px;
+  }
+  .faq-card {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  .img-wrapper {
+    width: 350px;
+    height: 200px;
+  }
+  .faq-wrapper {
+    padding: 15px 70px 40px 0;
+  }
+  .faq-wrapper h1 {
+    text-align: left;
+    padding: 20px 0 0 27px;
+  }
+  .faq-card ul {
+    width: 300px;
+    padding: 30px 30px 20px 30px;
+  }
+  .faq-card ul div {
+    width: 300px;
+  }
+}

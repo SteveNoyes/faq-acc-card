@@ -23,29 +23,9 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Hide/Show the answer to a question when the question is clicked
 
-## Style Guide
-### Layout
-The designs were created for the following widths:
-- Mobile: 375px
-- Desktop: 1440px
-### Colors
-- Very dark desaturated blue: hsl(238, 29%, 16%)
-- Soft red: hsl(14, 88%, 65%)
-- Soft violet: hsl(273, 75%, 66%)
-- Soft blue: hsl(240, 73%, 65%)
-- Very dark grayish blue: hsl(237, 12%, 33%)
-- Dark grayish blue: hsl(240, 6%, 50%)
-- Light grayish blue: hsl(240, 5%, 91%)
-### Typography
-- Font size: 12px
-- Family: [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk)
-- Weights: 500, 700, 800
-
 ## Screenshot
 
 ![Mobile](./assets/images/mobile.png)
-
-![Tablet](./assets/images/tablet.png)
 
 ![Desktop](./assets/images/desktop.png)
 
@@ -59,16 +39,43 @@ The designs were created for the following widths:
 - Mobile-first development
 - Semantic HTML5
 - CSS
+- The smallest amount of JavaScript
 
 ### What I learned
 
 ```html
-
+  <div class="img-wrapper">
+    <!-- Mobile -->
+    <img class="desk-icon mobile-toggle" src="./assets/images/illustration-woman-online-mobile.svg" alt="Aspect ration nightmare fuel">
+    <img class="desk-icon-shadow mobile-toggle" src="./assets/images/bg-pattern-mobile.svg" alt="Aspect ration nightmare fuel shadow">
+    <!-- Desktop -->
+    <img class="desktop-desk-icon desktop-toggle" src="./assets/images/illustration-woman-online-desktop.svg" alt="Aspect ration nightmare fuel">
+    <img class="desktop-desk-icon-shadow desktop-toggle" src="./assets/images/bg-pattern-desktop.svg" alt="Aspect ration nightmare fuel">
+  </div>
 ```
 
-
 ```css
+  .reverseIcon {
+    transform: rotate(180deg);
+  }
+```
 
+```js
+  let acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      let reverseIcons = document.getElementsByClassName("verseIcon");
+      let image = this.children[0];
+      this.classList.toggle("active");
+      image.classList.toggle("reverseIcon");
+      let panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
 ```
 
 ### Useful resources
